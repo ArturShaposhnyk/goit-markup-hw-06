@@ -46,10 +46,21 @@ button {
 }
 
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 428px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 .visually-hidden {
@@ -124,6 +135,16 @@ button {
     rgba(46, 47, 66, 0.7)
   );
 }
+.section {
+  padding: 96px 0px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0px;
+  }
+}
 
 /*---------HEADER--------- */
 .page-header {
@@ -131,6 +152,11 @@ button {
   background-color: var(--backgr-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+@media only screen and (min-width: 768px) {
+  .page-header {
+    padding: 0;
+  }
 }
 .menu-item {
   color: var(--backgr-button);
@@ -148,6 +174,13 @@ button {
   display: flex;
   align-items: center;
 }
+@media only screen and (min-width: 768px) {
+  .page-nav {
+    display: flex;
+    align-items: center;
+    padding: 0 0;
+  }
+}
 .page-nav:last-child {
   margin-right: 0px;
 }
@@ -155,6 +188,13 @@ button {
 .menu {
   display: flex;
   gap: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .menu {
+    margin-left: 120px;
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .menu-link {
@@ -221,15 +261,126 @@ button {
 .contact-mt:focus {
   color: var(--backgr-button);
 }
+@media only screen and (min-width: 768px) {
+  .contacts {
+    width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    font-style: normal;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .contacts {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-contact {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .contact-item:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .page-contact {
+    display: flex;
+    gap: 40px;
+    margin-left: 332px;
+  }
+
+  .contact-item:last-child {
+    margin-right: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contact-mt {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
 /*---------DESIGNATION--------- */
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .designation {
+    background-image: var(--main-gradient), url("../images/hero/mob@2x.jpg");
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .designation {
+    background-image: var(--main-gradient), url("../images/hero/tab@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .designation {
+      background-image: var(--main-gradient), url("../images/hero/tab@2x.jpg");
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .designation {
+    background-image: var(--main-gradient), url("../images/hero/desk@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .designation {
+      background-image: var(--main-gradient), url("../images/hero/desk@2x.jpg");
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .designation {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .designation {
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .designation-warap {
+    width: 496px;
+  }
+}
+.designation-warap {
+  width: 320px;
+  padding: 0 0;
+}
 .designation {
-  padding: 188px 0;
+  max-width: 1600px;
   margin: 0 auto;
-  max-width: 1440px;
-  background-color: var(--ancillary-color);
-  background-image: var(--main-gradient), url(../images/people-office.jpg);
+  background-image: var(--main-gradient), url(../images/hero/mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -277,15 +428,76 @@ button {
   letter-spacing: 1.12px;
   color: var(--backgr-color);
 }
+@media only screen and (min-width: 768px) {
+  .designation-title {
+    font-size: 56px;
+  }
+}
 
 /*---------ADVANTAGE--------- */
 .advantage {
   padding: 120px 0;
 }
+@media only screen and (min-width: 1158px) {
+  .advantage {
+    padding-bottom: 0;
+  }
+}
 
 .advantage-list {
   display: flex;
   gap: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-list {
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .adv-qual {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .adv-qual:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 72px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .adv-qual {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+}
+
+@media only screen and (max-width: 1157px) {
+  .adv-link-wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .adv-link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: var(--secondary-acnt-bg-color);
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 1158px) {
+  .adv-icon {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .adv-icon {
+    margin: 24px 100px;
+  }
 }
 .advantage-list .item:last-child {
   margin-right: 0px;
@@ -315,11 +527,40 @@ button {
   background-color: var(--log-stud-col);
   margin-bottom: 8px;
 }
+@media only screen and (min-width: 768px) {
+  .title-adv {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .title-adv {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1157px) {
+  .defin-adv {
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .defin-adv {
+    font-weight: 400;
+  }
+}
 
 /*---------OURWORK--------- */
 
 .ourwork {
   padding-bottom: 120px;
+}
+@media only screen and (max-width: 1158px) {
+  .ourwork {
+    display: none;
+  }
 }
 
 .ourwork-title {
@@ -343,6 +584,19 @@ button {
 .employ {
   padding: 120px 0;
   background-color: var(--log-stud-col);
+}
+@media only screen and (min-width: 768px) {
+  .empl-wrap {
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .empl-wrap {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 .empl-list-of-icons {
   display: flex;
