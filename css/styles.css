@@ -196,6 +196,11 @@ button {
     gap: 40px;
   }
 }
+@media only screen and (min-width: 1158px) {
+  .menu {
+    margin-left: 60px;
+  }
+}
 
 .menu-link {
   display: block;
@@ -312,9 +317,14 @@ button {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+    color: var(--body-color);
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .contact-mt {
+    font-size: 16px;
   }
 }
 
@@ -358,13 +368,14 @@ button {
 
 @media only screen and (min-width: 768px) {
   .designation {
+    padding: 112px 0;
     max-width: 768px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .designation {
-    padding: 188px 0;
+    padding: 112px 0;
     max-width: 1440px;
   }
 }
@@ -483,7 +494,7 @@ button {
     width: 264px;
     height: 112px;
     border-radius: 4px;
-    background-color: var(--secondary-acnt-bg-color);
+    background-color: var(--log-stud-col);
     margin-bottom: 8px;
   }
 }
@@ -585,6 +596,10 @@ button {
   padding: 120px 0;
   background-color: var(--log-stud-col);
 }
+.empl-wrap {
+  padding-right: 82px;
+  padding-left: 82px;
+}
 @media only screen and (min-width: 768px) {
   .empl-wrap {
     padding-right: 108px;
@@ -644,7 +659,22 @@ button {
   display: flex;
   gap: 24px;
 }
-
+@media only screen and (min-width: 768px) {
+  .employ-list {
+    gap: 72px 24px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .employ-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .employ-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    margin-bottom: 0;
+  }
+}
 .employ-item {
   width: calc((100% - 24px * 3) / 4);
   background-color: var(--backgr-color);
@@ -675,6 +705,54 @@ button {
   margin-bottom: 8px;
 }
 /*---------CUSTOMERS--------- */
+@media only screen and (min-width: 320px) {
+  .customer-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .customer-list {
+    width: 552px;
+    margin: 0 auto;
+    gap: 72px 16px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .customer-list {
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .customer-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .customer-item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .customer-item {
+    flex-basis: calc((100% - 5 * 24px) / 6);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .customer-link {
+    width: 168px;
+    height: 88px;
+  }
+}
 .customer {
   padding: 120px 0;
 }
@@ -726,6 +804,96 @@ button {
 }
 
 /*---------FOOTER--------- */
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 108px;
+    gap: 72px 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer {
+    display: flex;
+    max-width: 1158px;
+    gap: 0;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-logo {
+    margin-right: 128px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-footer .link {
+    display: flex;
+    text-align: left;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-footer .link {
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-soc {
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-txt-soc {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-txt-soc {
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-form-text {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lable {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-input {
+    width: 264px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-form-button {
+    margin: 0;
+  }
+}
 
 .footer {
   display: flex;
@@ -880,6 +1048,18 @@ button {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+@media only screen and (max-width: 427px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px;
+  }
 }
 
 .modal {
