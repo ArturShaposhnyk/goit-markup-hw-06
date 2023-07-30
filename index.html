@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <header class="page-header section">
+    <header class="page-header">
       <div class="container navigation">
         <nav class="site-nav">
           <a class="logo link" href="./index.html" target="_self"
@@ -66,7 +66,7 @@
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
-          <svg class="menu-toggle-icon" width="32" height="32">
+          <svg class="menu-toggle-icon" width="32" height="22">
             <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
           </svg>
         </button>
@@ -710,29 +710,35 @@
           <use href="./images/icons.svg#x-close"></use>
         </svg>
       </button>
-      <ul class="mobile-menu">
-        <li class="menu-item">
-          <a href="index.html" class="link active-menu">Studio</a>
-        </li>
-        <li class="menu-item">
-          <a href="portfolio.html" class="link">Portfolio</a>
-        </li>
-        <li class="menu-item">
-          <a href="index.html" class="link">Contacts</a>
-        </li>
-      </ul>
-      <ul class="mobile-address-list">
-        <li class="mobile-address-item">
-          <a class="mobile-address-link" href="tel:+110001111111">
-            +11 (000)111-11-11
-          </a>
-        </li>
-        <li class="mobile-address-item">
-          <a class="mobile-address-link" href="mailto:info@devstudio.com">
-            info@devstudio.com
-          </a>
-        </li>
-      </ul>
+      <div class="menu-scroll-container">
+        <nav class="mobile-nav">
+          <ul class="mobile-menu">
+            <li class="menu-item">
+              <a href="index.html" class="link active-menu">Studio</a>
+            </li>
+            <li class="menu-item">
+              <a href="portfolio.html" class="link">Portfolio</a>
+            </li>
+            <li class="menu-item">
+              <a href="index.html" class="link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <address class="address-mobile">
+        <ul class="mobile-address-list">
+          <li class="mobile-address-item">
+            <a class="mobile-address-link" href="tel:+110001111111">
+              +11 (000)111-11-11
+            </a>
+          </li>
+          <li class="mobile-address-item">
+            <a class="mobile-address-link" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+      </address>
       <ul class="mobile-soc-list">
         <li class="mobile-soc-item">
           <a href="" class="mobile-soc-link">
