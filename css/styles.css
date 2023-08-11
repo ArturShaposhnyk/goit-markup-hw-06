@@ -742,7 +742,6 @@ fieldset {
 
   width: 100%;
   height: 88px;
-  margin: 0 auto;
 
   border-radius: 4px;
   border: 1px solid #8e8f99;
@@ -754,8 +753,6 @@ fieldset {
 
 @media only screen and (min-width: 768px) {
   .clients-link {
-    width: 168px;
-    height: 88px;
   }
 }
 
@@ -1387,12 +1384,11 @@ fieldset {
 .menu-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding-left: 40px;
   padding-top: 80px;
   padding-bottom: 40px;
@@ -1401,6 +1397,7 @@ fieldset {
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  overflow: auto;
 }
 
 .menu-container.is-open {
@@ -1444,11 +1441,11 @@ fieldset {
 .mobile-address-list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 48px;
   gap: 40px;
 }
 .address-mobile {
   margin-bottom: 48px;
+  margin-top: auto;
 }
 
 .mobile-address-link {
@@ -1527,6 +1524,4 @@ fieldset {
   fill: var(--btn-second-color);
 }
 .menu-scroll-container {
-  height: calc(100vh - 120px);
-  overflow-y: auto;
 }
